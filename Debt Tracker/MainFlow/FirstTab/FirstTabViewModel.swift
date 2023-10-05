@@ -9,9 +9,9 @@ import Foundation
 
 struct FirstTabModel {
     var name: String
-    var ears: Int?
+    var age: Int?
 }
 
 class FirstTabViewModel {
-    var model = FirstTabModel(name: "", ears: nil)
+    var model = FirstTabModel(name: "", age: nil)
 }

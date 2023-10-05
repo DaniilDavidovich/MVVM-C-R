@@ -24,7 +24,7 @@ class FirstViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        label.text = "Yor Name: \(viewModel?.model.name ?? "" )\nYour Ears: \(viewModel?.model.ears ?? 0)"
+        label.text = "Yor Name: \(viewModel?.model.name ?? "" )\nYour Age: \(viewModel?.model.age ?? 0)"
     }
     
     private lazy var label: UILabel = {

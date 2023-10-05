@@ -58,7 +58,7 @@ extension FirstDetailViewController: UITextFieldDelegate {
         if textField == nameTextField {
             viewModel?.model.name = textField.text ?? ""
         } else {
-            viewModel?.model.ears = Int(textField.text ?? "")
+            viewModel?.model.age = Int(textField.text ?? "")
         }
     }
 }
