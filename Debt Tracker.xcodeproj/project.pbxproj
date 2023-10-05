@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A523942D2AC441930085D22E /* FirstTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523942C2AC441930085D22E /* FirstTabViewModel.swift */; };
+		A52394312AC475160085D22E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394302AC475160085D22E /* AppRouter.swift */; };
+		A52394332AC477A50085D22E /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394322AC477A50085D22E /* OnboardingRouter.swift */; };
+		A52394352AC479460085D22E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394342AC479460085D22E /* MainRouter.swift */; };
+		A52394372AC58D280085D22E /* FirstTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394362AC58D280085D22E /* FirstTabRouter.swift */; };
+		A52394392AC5943D0085D22E /* SecondTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394382AC5943D0085D22E /* SecondTabRouter.swift */; };
+		A523943B2AC594DE0085D22E /* ViewControllerRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523943A2AC594DE0085D22E /* ViewControllerRouterProtocol.swift */; };
+		A523943D2AC597AB0085D22E /* MainRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523943C2AC597AB0085D22E /* MainRouterProtocol.swift */; };
+		A52394412AC598600085D22E /* AppRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52394402AC598600085D22E /* AppRouterProtocol.swift */; };
+		A56BA7E22ACE4538007879AB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BA7E12ACE4538007879AB /* NotificationManager.swift */; };
+		A5A06C052AC1C89400236084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C042AC1C89400236084 /* AppDelegate.swift */; };
+		A5A06C072AC1C89400236084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C062AC1C89400236084 /* SceneDelegate.swift */; };
+		A5A06C092AC1C89400236084 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C082AC1C89400236084 /* FirstViewController.swift */; };
+		A5A06C0F2AC1C89400236084 /* Debt_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C0D2AC1C89400236084 /* Debt_Tracker.xcdatamodeld */; };
+		A5A06C112AC1C89600236084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A06C102AC1C89600236084 /* Assets.xcassets */; };
+		A5A06C142AC1C89600236084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A06C122AC1C89600236084 /* LaunchScreen.storyboard */; };
+		A5A06C1E2AC1D5DD00236084 /* CoodinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C1D2AC1D5DD00236084 /* CoodinatorProtocol.swift */; };
+		A5A06C202AC1D63000236084 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06C1F2AC1D63000236084 /* AppCoordinator.swift */; };
+		A5B9AC6A2AC3170400198E08 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC692AC3170400198E08 /* OnboardingCoordinator.swift */; };
+		A5B9AC6C2AC3171400198E08 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC6B2AC3171400198E08 /* MainCoordinator.swift */; };
+		A5B9AC742AC3266500198E08 /* FirstTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC732AC3266400198E08 /* FirstTabCoordinator.swift */; };
+		A5B9AC762AC326E100198E08 /* SecondTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC752AC326E100198E08 /* SecondTabCoordinator.swift */; };
+		A5B9AC792AC3279B00198E08 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A5B9AC782AC3279B00198E08 /* SnapKit */; };
+		A5B9AC7B2AC3280E00198E08 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC7A2AC3280E00198E08 /* SecondViewController.swift */; };
+		A5B9AC7D2AC3298000198E08 /* FirstDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC7C2AC3298000198E08 /* FirstDetailViewController.swift */; };
+		A5B9AC7F2AC3298F00198E08 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC7E2AC3298F00198E08 /* SecondDetailViewController.swift */; };
+		A5B9AC812AC3337F00198E08 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC802AC3337F00198E08 /* OnboardingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A523942C2AC441930085D22E /* FirstTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewModel.swift; sourceTree = "<group>"; };
+		A52394302AC475160085D22E /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A52394322AC477A50085D22E /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		A52394342AC479460085D22E /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		A52394362AC58D280085D22E /* FirstTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabRouter.swift; sourceTree = "<group>"; };
+		A52394382AC5943D0085D22E /* SecondTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabRouter.swift; sourceTree = "<group>"; };
+		A523943A2AC594DE0085D22E /* ViewControllerRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRouterProtocol.swift; sourceTree = "<group>"; };
+		A523943C2AC597AB0085D22E /* MainRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterProtocol.swift; sourceTree = "<group>"; };
+		A52394402AC598600085D22E /* AppRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterProtocol.swift; sourceTree = "<group>"; };
+		A56BA7E12ACE4538007879AB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		A5A06C012AC1C89400236084 /* Debt Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Debt Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A06C042AC1C89400236084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5A06C062AC1C89400236084 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A5A06C082AC1C89400236084 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A5A06C0E2AC1C89400236084 /* Debt_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Debt_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		A5A06C102AC1C89600236084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5A06C132AC1C89600236084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5A06C152AC1C89600236084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A06C1D2AC1D5DD00236084 /* CoodinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoodinatorProtocol.swift; sourceTree = "<group>"; };
+		A5A06C1F2AC1D63000236084 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A5B9AC692AC3170400198E08 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		A5B9AC6B2AC3171400198E08 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A5B9AC732AC3266400198E08 /* FirstTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabCoordinator.swift; sourceTree = "<group>"; };
+		A5B9AC752AC326E100198E08 /* SecondTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabCoordinator.swift; sourceTree = "<group>"; };
+		A5B9AC7A2AC3280E00198E08 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A5B9AC7C2AC3298000198E08 /* FirstDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailViewController.swift; sourceTree = "<group>"; };
+		A5B9AC7E2AC3298F00198E08 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
+		A5B9AC802AC3337F00198E08 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5A06BFE2AC1C89400236084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B9AC792AC3279B00198E08 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A523943E2AC5980A0085D22E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06C1D2AC1D5DD00236084 /* CoodinatorProtocol.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A523943F2AC598170085D22E /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A52394402AC598600085D22E /* AppRouterProtocol.swift */,
+				A523943C2AC597AB0085D22E /* MainRouterProtocol.swift */,
+				A523943A2AC594DE0085D22E /* ViewControllerRouterProtocol.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A5A06BF82AC1C89400236084 = {
+			isa = PBXGroup;
+			children = (
+				A5A06C032AC1C89400236084 /* Debt Tracker */,
+				A5A06C022AC1C89400236084 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5A06C022AC1C89400236084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06C012AC1C89400236084 /* Debt Tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5A06C032AC1C89400236084 /* Debt Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06C1C2AC1D5BE00236084 /* Protocols */,
+				A5B9AC6F2AC3208200198E08 /* App */,
+				A5B9AC6D2AC3205C00198E08 /* OnboardingFlow */,
+				A5B9AC6E2AC3206C00198E08 /* MainFlow */,
+				A5A06C1B2AC1D25200236084 /* Resources */,
+			);
+			path = "Debt Tracker";
+			sourceTree = "<group>";
+		};
+		A5A06C1B2AC1D25200236084 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06C0D2AC1C89400236084 /* Debt_Tracker.xcdatamodeld */,
+				A5A06C102AC1C89600236084 /* Assets.xcassets */,
+				A5A06C122AC1C89600236084 /* LaunchScreen.storyboard */,
+				A5A06C152AC1C89600236084 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5A06C1C2AC1D5BE00236084 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A523943E2AC5980A0085D22E /* Coordinators */,
+				A523943F2AC598170085D22E /* Routers */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A5B9AC6D2AC3205C00198E08 /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A52394322AC477A50085D22E /* OnboardingRouter.swift */,
+				A5B9AC692AC3170400198E08 /* OnboardingCoordinator.swift */,
+				A5B9AC802AC3337F00198E08 /* OnboardingViewController.swift */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		A5B9AC6E2AC3206C00198E08 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A52394342AC479460085D22E /* MainRouter.swift */,
+				A5B9AC6B2AC3171400198E08 /* MainCoordinator.swift */,
+				A5B9AC702AC3261700198E08 /* FirstTab */,
+				A5B9AC712AC3262A00198E08 /* SecondTab */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		A5B9AC6F2AC3208200198E08 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06C042AC1C89400236084 /* AppDelegate.swift */,
+				A5A06C062AC1C89400236084 /* SceneDelegate.swift */,
+				A52394302AC475160085D22E /* AppRouter.swift */,
+				A5A06C1F2AC1D63000236084 /* AppCoordinator.swift */,
+				A56BA7E12ACE4538007879AB /* NotificationManager.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A5B9AC702AC3261700198E08 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				A52394362AC58D280085D22E /* FirstTabRouter.swift */,
+				A5B9AC732AC3266400198E08 /* FirstTabCoordinator.swift */,
+				A523942C2AC441930085D22E /* FirstTabViewModel.swift */,
+				A5A06C082AC1C89400236084 /* FirstViewController.swift */,
+				A5B9AC7C2AC3298000198E08 /* FirstDetailViewController.swift */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		A5B9AC712AC3262A00198E08 /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				A52394382AC5943D0085D22E /* SecondTabRouter.swift */,
+				A5B9AC752AC326E100198E08 /* SecondTabCoordinator.swift */,
+				A5B9AC7A2AC3280E00198E08 /* SecondViewController.swift */,
+				A5B9AC7E2AC3298F00198E08 /* SecondDetailViewController.swift */,
+			);
+			path = SecondTab;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5A06C002AC1C89400236084 /* Debt Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A06C182AC1C89600236084 /* Build configuration list for PBXNativeTarget "Debt Tracker" */;
+			buildPhases = (
+				A5A06BFD2AC1C89400236084 /* Sources */,
+				A5A06BFE2AC1C89400236084 /* Frameworks */,
+				A5A06BFF2AC1C89400236084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Debt Tracker";
+			packageProductDependencies = (
+				A5B9AC782AC3279B00198E08 /* SnapKit */,
+			);
+			productName = "Debt Tracker";
+			productReference = A5A06C012AC1C89400236084 /* Debt Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5A06BF92AC1C89400236084 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A5A06C002AC1C89400236084 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A5A06BFC2AC1C89400236084 /* Build configuration list for PBXProject "Debt Tracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5A06BF82AC1C89400236084;
+			packageReferences = (
+				A5B9AC772AC3279B00198E08 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = A5A06C022AC1C89400236084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5A06C002AC1C89400236084 /* Debt Tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5A06BFF2AC1C89400236084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A06C142AC1C89600236084 /* LaunchScreen.storyboard in Resources */,
+				A5A06C112AC1C89600236084 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5A06BFD2AC1C89400236084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B9AC7B2AC3280E00198E08 /* SecondViewController.swift in Sources */,
+				A5A06C202AC1D63000236084 /* AppCoordinator.swift in Sources */,
+				A5B9AC6C2AC3171400198E08 /* MainCoordinator.swift in Sources */,
+				A5A06C092AC1C89400236084 /* FirstViewController.swift in Sources */,
+				A52394372AC58D280085D22E /* FirstTabRouter.swift in Sources */,
+				A5A06C052AC1C89400236084 /* AppDelegate.swift in Sources */,
+				A56BA7E22ACE4538007879AB /* NotificationManager.swift in Sources */,
+				A5B9AC7F2AC3298F00198E08 /* SecondDetailViewController.swift in Sources */,
+				A5B9AC742AC3266500198E08 /* FirstTabCoordinator.swift in Sources */,
+				A5B9AC6A2AC3170400198E08 /* OnboardingCoordinator.swift in Sources */,
+				A5A06C1E2AC1D5DD00236084 /* CoodinatorProtocol.swift in Sources */,
+				A5B9AC7D2AC3298000198E08 /* FirstDetailViewController.swift in Sources */,
+				A523943D2AC597AB0085D22E /* MainRouterProtocol.swift in Sources */,
+				A5A06C072AC1C89400236084 /* SceneDelegate.swift in Sources */,
+				A52394332AC477A50085D22E /* OnboardingRouter.swift in Sources */,
+				A52394312AC475160085D22E /* AppRouter.swift in Sources */,
+				A5B9AC812AC3337F00198E08 /* OnboardingViewController.swift in Sources */,
+				A523942D2AC441930085D22E /* FirstTabViewModel.swift in Sources */,
+				A523943B2AC594DE0085D22E /* ViewControllerRouterProtocol.swift in Sources */,
+				A52394392AC5943D0085D22E /* SecondTabRouter.swift in Sources */,
+				A52394412AC598600085D22E /* AppRouterProtocol.swift in Sources */,
+				A5B9AC762AC326E100198E08 /* SecondTabCoordinator.swift in Sources */,
+				A5A06C0F2AC1C89400236084 /* Debt_Tracker.xcdatamodeld in Sources */,
+				A52394352AC479460085D22E /* MainRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5A06C122AC1C89600236084 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A06C132AC1C89600236084 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5A06C162AC1C89600236084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5A06C172AC1C89600236084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5A06C192AC1C89600236084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PHY3R68LB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Debt Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Debt-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5A06C1A2AC1C89600236084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PHY3R68LB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Debt Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Debt-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5A06BFC2AC1C89400236084 /* Build configuration list for PBXProject "Debt Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06C162AC1C89600236084 /* Debug */,
+				A5A06C172AC1C89600236084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A06C182AC1C89600236084 /* Build configuration list for PBXNativeTarget "Debt Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06C192AC1C89600236084 /* Debug */,
+				A5A06C1A2AC1C89600236084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5B9AC772AC3279B00198E08 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5B9AC782AC3279B00198E08 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5B9AC772AC3279B00198E08 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		A5A06C0D2AC1C89400236084 /* Debt_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5A06C0E2AC1C89400236084 /* Debt_Tracker.xcdatamodel */,
+			);
+			currentVersion = A5A06C0E2AC1C89400236084 /* Debt_Tracker.xcdatamodel */;
+			path = Debt_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A5A06BF92AC1C89400236084 /* Project object */;
+}
