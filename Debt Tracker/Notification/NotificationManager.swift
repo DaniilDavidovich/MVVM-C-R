@@ -6,18 +6,19 @@
 //
 
 import Foundation
+import UserNotifications
 
-protocol NotificationManagerProtocol {
+protocol NotificationCenterManagerProtocol {
     associatedtype T
     
     func addObserver(name: String, handler: @escaping (T) -> Void)
     func post(name: String, value: T)
 }
 
-class NotificationManager<T>: NotificationManagerProtocol {
+class NotificationCenterManager<T>: NotificationCenterManagerProtocol {
     
     private let notificationCenter = NotificationCenter.default
-        
+    
     func addObserver(name: String, handler: @escaping (T) -> Void) {
         
         notificationCenter.addObserver(
@@ -41,3 +42,13 @@ class NotificationManager<T>: NotificationManagerProtocol {
             userInfo: ["value": value])
     }
 }
+
+
+
+
+        
+        
+        
+        
+        
+        
