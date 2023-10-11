@@ -17,7 +17,8 @@ class AppCoordinator: CoordinatorProtocol {
     
     var childCoordinatrors = [CoordinatorProtocol]()
     
-    let notificationManager = NotificationManager<Bool>()
+    let notificationManager = NotificationCenterManager<Bool>()
+   
     
     init(window: UIWindow?) {
         self.window = window
@@ -26,8 +27,11 @@ class AppCoordinator: CoordinatorProtocol {
     
     func start() {
         notificationManager.addObserver(name: "bool") { bool in
+            
             self.router?.showFlow(isMainFlow: bool)
         }
         notificationManager.post(name: "bool", value: false)
+       
+ 
     }
 }

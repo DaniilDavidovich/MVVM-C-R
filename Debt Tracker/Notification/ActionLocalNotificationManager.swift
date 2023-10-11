@@ -67,6 +67,22 @@ class ActionLocalNotificationManager: NSObject, LocalNotificationManagerProtocol
     }
 }
 
+extension ActionLocalNotificationManager: UNUserNotificationCenterDelegate {
+    
+    // for App is Luanched!!!
+    // when Notification show in Phone, if LAUNCHED
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner])
+        print(#function)
+    }
+    
+    
+    // when tap on Notification
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print(#function)
+    }
+}
+
 
 
 

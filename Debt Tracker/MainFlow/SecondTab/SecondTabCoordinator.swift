@@ -15,7 +15,7 @@ class SecondTabCoordinator: CoordinatorProtocol {
     
     var router: SecondTabRouter?
     
-    let notificationManager = NotificationManager<Bool>()
+    let notificationManager = NotificationCenterManager<Bool>()
     
     init() {
     

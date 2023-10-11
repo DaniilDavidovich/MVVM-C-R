@@ -41,6 +41,8 @@ class NotificationCenterManager<T>: NotificationCenterManagerProtocol {
             object: nil,
             userInfo: ["value": value])
     }
+    
+    
 }
 
 

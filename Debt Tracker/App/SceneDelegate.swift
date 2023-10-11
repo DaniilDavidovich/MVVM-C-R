@@ -10,6 +10,8 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var appCoordinator: AppCoordinator?
+    
+    let notificationTime = TimerLocalNotificationManager(identifier: "Timer", title: "Timer is Start", body: "Cheack APP", sound: .default, hour: 8, minute: 14)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
@@ -21,6 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.appCoordinator = appCoordinator
         window.makeKeyAndVisible()
+        
+        notificationTime.requestAndDispatchNotification()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

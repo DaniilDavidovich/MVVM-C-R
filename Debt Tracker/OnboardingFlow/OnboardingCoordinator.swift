@@ -11,6 +11,8 @@ import UIKit
 class OnboardingCoordinator: CoordinatorProtocol {
     
     var rootViewController = UIViewController()
+    let notificationAction = ActionLocalNotificationManager(identifier: "Button", 
+                                                            title: "Button is Tapped", body: "Hi, its Main Flow", sound: .default)
     
     var router: OnboardingRouter?
     
@@ -22,6 +24,8 @@ class OnboardingCoordinator: CoordinatorProtocol {
         let onboardingVC = OnboardingViewController()
         onboardingVC.endOnboarding = { [weak self] in
             self?.router?.showMainScreen()
+            self?.notificationAction.requestAndDispatchNotification()
+      
         }
         return onboardingVC
     }()

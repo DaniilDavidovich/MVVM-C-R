@@ -8,7 +8,7 @@
 import Foundation
 import UserNotifications
 
-class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol, UNUserNotificationCenterDelegate {
+class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol {
   
     var notificationCenter = UNUserNotificationCenter.current()
     
@@ -23,7 +23,8 @@ class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol,
          title: String,
          body: String,
          sound: UNNotificationSound, 
-         hour: Int, minute: Int) {
+         hour: Int, 
+         minute: Int) {
         
         self.identifier = identifier
         self.title = title
@@ -63,6 +64,7 @@ class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol,
     func setupTrigger() -> UNNotificationTrigger {
         let calendar = Calendar.current
         var dateComponents = DateComponents(calendar: calendar, timeZone: TimeZone.current)
+
         dateComponents.hour = self.hour
         dateComponents.minute = self.minute
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
@@ -71,7 +73,7 @@ class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol,
     
     func setupRequest() {
         
-        var trigger = setupTrigger()
+        let trigger = setupTrigger()
         let content = setupContentNotification()
         let request = UNNotificationRequest(identifier: self.identifier, content: content, trigger: trigger)
         
@@ -80,7 +82,7 @@ class TimerLocalNotificationManager: NSObject, LocalNotificationManagerProtocol,
     }
 }
 
-extension ActionLocalNotificationManager: UNUserNotificationCenterDelegate {
+extension TimerLocalNotificationManager: UNUserNotificationCenterDelegate {
     
     // for App is Luanched!!!
     // when Notification show in Phone, if LAUNCHED

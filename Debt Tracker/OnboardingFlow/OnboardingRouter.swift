@@ -14,7 +14,7 @@ protocol OnboardingRouterProtocol: AnyObject {
 class OnboardingRouter: OnboardingRouterProtocol {
     
     weak var onboardingCoordinator: OnboardingCoordinator?
-    let notificationManager = NotificationManager<Bool>()
+    let notificationManager = NotificationCenterManager<Bool>()
     
     init(onboardingCoordinator: OnboardingCoordinator) {
         self.onboardingCoordinator = onboardingCoordinator
@@ -22,6 +22,5 @@ class OnboardingRouter: OnboardingRouterProtocol {
     
     func showMainScreen() {
         notificationManager.post(name: "bool", value: true)
-        print(#function)
     }
 }
