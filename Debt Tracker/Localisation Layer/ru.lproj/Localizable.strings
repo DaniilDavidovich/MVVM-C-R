@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Debt Tracker
+
+  Created by Daniil Davidovich on 14.10.23.
+  
+*/
+
+"Button is Taped" = "Кнопка Нажата";
+"Hi, its Main Flow" = "Привет, это основной поток";

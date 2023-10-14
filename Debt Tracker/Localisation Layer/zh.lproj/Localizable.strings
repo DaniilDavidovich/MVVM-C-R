@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Debt Tracker
+
+  Created by Daniil Davidovich on 14.10.23.
+  
+*/
+
+"Button is Taped" = "嗨，它的主要流程";
+"Hi, its Main Flow" = "按钮被敲击";
