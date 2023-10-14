@@ -34,6 +34,9 @@
 		A5B9AC7D2AC3298000198E08 /* FirstDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC7C2AC3298000198E08 /* FirstDetailViewController.swift */; };
 		A5B9AC7F2AC3298F00198E08 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC7E2AC3298F00198E08 /* SecondDetailViewController.swift */; };
 		A5B9AC812AC3337F00198E08 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AC802AC3337F00198E08 /* OnboardingViewController.swift */; };
+		A5C111E62ADA5CAE000680EE /* extension +String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C111E52ADA5CAE000680EE /* extension +String.swift */; };
+		A5C111E92ADA603F000680EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C111EB2ADA603F000680EE /* Localizable.strings */; };
+		A5C111F62ADA7834000680EE /* extension +Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C111F52ADA7834000680EE /* extension +Int.swift */; };
 		A5F192162AD59BBB001EBE8F /* TimerLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F192152AD59BBB001EBE8F /* TimerLocalNotificationManager.swift */; };
 		A5F192192AD6459C001EBE8F /* LocalNotificationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F192182AD6459C001EBE8F /* LocalNotificationManagerProtocol.swift */; };
 		A5F1921B2AD645CF001EBE8F /* ActionLocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F1921A2AD645CF001EBE8F /* ActionLocalNotificationManager.swift */; };
@@ -68,6 +71,11 @@
 		A5B9AC7C2AC3298000198E08 /* FirstDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailViewController.swift; sourceTree = "<group>"; };
 		A5B9AC7E2AC3298F00198E08 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
 		A5B9AC802AC3337F00198E08 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A5C111E52ADA5CAE000680EE /* extension +String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension +String.swift"; sourceTree = "<group>"; };
+		A5C111EC2ADA6074000680EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5C111F12ADA685C000680EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A5C111F32ADA6865000680EE /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A5C111F52ADA7834000680EE /* extension +Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension +Int.swift"; sourceTree = "<group>"; };
 		A5F192152AD59BBB001EBE8F /* TimerLocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLocalNotificationManager.swift; sourceTree = "<group>"; };
 		A5F192182AD6459C001EBE8F /* LocalNotificationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManagerProtocol.swift; sourceTree = "<group>"; };
 		A5F1921A2AD645CF001EBE8F /* ActionLocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLocalNotificationManager.swift; sourceTree = "<group>"; };
@@ -122,11 +130,11 @@
 		A5A06C032AC1C89400236084 /* Debt Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				A5F192172AD6457F001EBE8F /* Notification */,
+				A5C111F42ADA7823000680EE /* Extensions */,
+				A5C111E42ADA5C9A000680EE /* Localisation Layer */,
+				A5F192172AD6457F001EBE8F /* Notification Layer */,
 				A5A06C1C2AC1D5BE00236084 /* Protocols */,
 				A5B9AC6F2AC3208200198E08 /* App */,
-				A5B9AC6D2AC3205C00198E08 /* OnboardingFlow */,
-				A5B9AC6E2AC3206C00198E08 /* MainFlow */,
 				A5A06C1B2AC1D25200236084 /* Resources */,
 			);
 			path = "Debt Tracker";
@@ -180,6 +188,8 @@
 				A5A06C062AC1C89400236084 /* SceneDelegate.swift */,
 				A52394302AC475160085D22E /* AppRouter.swift */,
 				A5A06C1F2AC1D63000236084 /* AppCoordinator.swift */,
+				A5B9AC6D2AC3205C00198E08 /* OnboardingFlow */,
+				A5B9AC6E2AC3206C00198E08 /* MainFlow */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -207,7 +217,24 @@
 			path = SecondTab;
 			sourceTree = "<group>";
 		};
-		A5F192172AD6457F001EBE8F /* Notification */ = {
+		A5C111E42ADA5C9A000680EE /* Localisation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				A5C111E52ADA5CAE000680EE /* extension +String.swift */,
+				A5C111EB2ADA603F000680EE /* Localizable.strings */,
+			);
+			path = "Localisation Layer";
+			sourceTree = "<group>";
+		};
+		A5C111F42ADA7823000680EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5C111F52ADA7834000680EE /* extension +Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5F192172AD6457F001EBE8F /* Notification Layer */ = {
 			isa = PBXGroup;
 			children = (
 				A5F192182AD6459C001EBE8F /* LocalNotificationManagerProtocol.swift */,
@@ -215,7 +242,7 @@
 				A5F1921A2AD645CF001EBE8F /* ActionLocalNotificationManager.swift */,
 				A56BA7E12ACE4538007879AB /* NotificationManager.swift */,
 			);
-			path = Notification;
+			path = "Notification Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +290,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				zh,
 			);
 			mainGroup = A5A06BF82AC1C89400236084;
 			packageReferences = (
@@ -283,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5A06C142AC1C89600236084 /* LaunchScreen.storyboard in Resources */,
+				A5C111E92ADA603F000680EE /* Localizable.strings in Resources */,
 				A5A06C112AC1C89600236084 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C111F62ADA7834000680EE /* extension +Int.swift in Sources */,
 				A5B9AC7B2AC3280E00198E08 /* SecondViewController.swift in Sources */,
+				A5C111E62ADA5CAE000680EE /* extension +String.swift in Sources */,
 				A5F192162AD59BBB001EBE8F /* TimerLocalNotificationManager.swift in Sources */,
 				A5A06C202AC1D63000236084 /* AppCoordinator.swift in Sources */,
 				A5B9AC6C2AC3171400198E08 /* MainCoordinator.swift in Sources */,
@@ -331,8 +363,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				A5A06C132AC1C89600236084 /* Base */,
+				A5C111F12ADA685C000680EE /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5C111EB2ADA603F000680EE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5C111EC2ADA6074000680EE /* ru */,
+				A5C111F32ADA6865000680EE /* zh */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -403,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

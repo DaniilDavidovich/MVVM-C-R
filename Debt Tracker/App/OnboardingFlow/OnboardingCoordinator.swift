@@ -11,8 +11,8 @@ import UIKit
 class OnboardingCoordinator: CoordinatorProtocol {
     
     var rootViewController = UIViewController()
-    let notificationAction = ActionLocalNotificationManager(identifier: "Button", 
-                                                            title: "Button is Tapped", body: "Hi, its Main Flow", sound: .default)
+    let notificationAction = ActionLocalNotificationManager(identifier: Constants.indentifire,
+                                                            title: Constants.title, body: Constants.body, sound: .default)
     
     var router: OnboardingRouter?
     
@@ -33,4 +33,10 @@ class OnboardingCoordinator: CoordinatorProtocol {
     func start() {
         rootViewController = self.onboardingVC
     }
+}
+
+fileprivate enum Constants {
+    static let indentifire = "Button"
+    static let title = "Button is Taped".localised()
+    static let body = "Hi, its Main Flow".localised()
 }

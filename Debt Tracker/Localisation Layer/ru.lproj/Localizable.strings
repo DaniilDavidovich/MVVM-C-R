@@ -8,3 +8,14 @@
 
 "Button is Taped" = "Кнопка Нажата";
 "Hi, its Main Flow" = "Привет, это основной поток";
+"End Onboarding" = "Закончить Введение";
+"First" = "Первый";
+"Second" = "Второй";
+"First View Controller" = "Первый Вью Контроллер";
+"Your Name: " = "Ваше имя ";
+"Your Age: " = "Ваш возраст ";
+"First Detail View Cotroller" = "Дополнительный Экран ";
+"Enter Name" = "Введите Имя";
+"Enter Age" = "Введите Возраст";
+"Push" = "Перейти на Дополнительный экран";
+"Go to Onboarding Flow" = "Перейти на экран Введения";

@@ -14,7 +14,7 @@ class SecondViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Puuuush", for: .normal)
+        button.setTitle(Constants.buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
@@ -33,4 +33,8 @@ class SecondViewController: UIViewController {
         pushToDetail()
     }
     
+}
+
+fileprivate enum Constants {
+    static let buttonTitle = "Push".localised()
 }

@@ -18,7 +18,7 @@ class MainRouter: MainRouterProtocol {
         coordinator?.childCoordinators.append(firstCoordinator)
         
         if let vc = firstCoordinator.navigationController {
-            vc.tabBarItem = setupUITabBarItem(title: "First",
+            vc.tabBarItem = setupUITabBarItem(title: Constants.firstTabTitle,
                                               image: "heart",
                                               selectedImage: "heart.fill")
             return vc
@@ -31,7 +31,7 @@ class MainRouter: MainRouterProtocol {
         secondTabCoordinator.start()
         let vc = secondTabCoordinator.navigationController
         
-        vc.tabBarItem = setupUITabBarItem(title: "Second",
+        vc.tabBarItem = setupUITabBarItem(title: Constants.seondTabTitle,
                                           image: "paperplane",
                                           selectedImage: "paperplane.fill")
         return vc
@@ -47,4 +47,9 @@ class MainRouter: MainRouterProtocol {
         let tabBarItem = UITabBarItem(title: title, image: UIImage(systemName: image), selectedImage: UIImage(systemName: selectedImage))
         return tabBarItem
     }
+}
+
+fileprivate enum Constants {
+    static let firstTabTitle = "First".localised()
+    static let seondTabTitle = "Second".localised()
 }

@@ -24,7 +24,8 @@ class FirstViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        label.text = "Yor Name: \(viewModel?.model.name ?? "" )\nYour Age: \(viewModel?.model.age ?? 0)"
+        guard let viewModel = viewModel else { return }
+        label.text = Constants.labelTextName + " " + viewModel.model.name + "\n" + Constants.labelTextAge + " " + viewModel.model.age.toString()
     }
     
     private lazy var label: UILabel = {
@@ -36,7 +37,7 @@ class FirstViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Push", for: .normal)
+        button.setTitle(Constants.buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(pushToFirstDetail), for: .touchUpInside)
         return button
     }()
@@ -46,6 +47,7 @@ class FirstViewController: UIViewController {
         view.backgroundColor = .systemGray6
         view.addSubview(label)
         view.addSubview(button)
+        navigationController?.navigationBar.tintColor = .red
         
         label.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -61,4 +63,13 @@ class FirstViewController: UIViewController {
         pushCloser()
     }
 }
+
+fileprivate enum Constants {
+    static let labelTextName = "Your Name: ".localised()
+    static let labelTextAge = "Your Age: ".localised()
+    static let buttonTitle = "Push".localised()
+}
+
+
+
 

@@ -36,7 +36,7 @@ class OnboardingViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("End Onboarding", for: .normal)
+        button.setTitle(Constants.buttonTitle, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
@@ -97,4 +97,8 @@ class OnboardingViewController: UIViewController {
     func buttonTapped() {
         endOnboarding()
     }
+}
+
+fileprivate enum Constants {
+    static let buttonTitle = "End Onboarding".localised()
 }

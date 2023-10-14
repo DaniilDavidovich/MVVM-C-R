@@ -13,7 +13,7 @@ class SecondDetailViewController: UIViewController {
     
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Go to Onboarding Flow", for: .normal)
+        button.setTitle(Constants.buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
@@ -33,4 +33,8 @@ class SecondDetailViewController: UIViewController {
         showOnboardingFlow()
     }
     
+}
+
+fileprivate enum Constants {
+    static let buttonTitle = "Go to Onboarding Flow".localised()
 }

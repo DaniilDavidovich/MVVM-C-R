@@ -22,22 +22,21 @@ class FirstDetailViewController: UIViewController {
     
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter Name"
+        textField.placeholder = Constants.nameTextFieldPlaceholder
         textField.delegate = self
         return textField
     }()
     
     private lazy var earsTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter Ears"
+        textField.placeholder = Constants.ageTextFieldPlaceholder
         textField.delegate = self
         return textField
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "First Detail View Cotroller"
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray5
         view.addSubview(nameTextField)
         view.addSubview(earsTextField)
         
@@ -50,6 +49,10 @@ class FirstDetailViewController: UIViewController {
             make.top.equalTo(nameTextField.snp.top).inset(50)
         }
     }
+    
+    @objc func pop() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension FirstDetailViewController: UITextFieldDelegate {
@@ -61,4 +64,9 @@ extension FirstDetailViewController: UITextFieldDelegate {
             viewModel?.model.age = Int(textField.text ?? "")
         }
     }
+}
+
+fileprivate enum Constants {
+    static let nameTextFieldPlaceholder = "Enter Name".localised()
+    static let ageTextFieldPlaceholder = "Enter Age".localised()
 }
